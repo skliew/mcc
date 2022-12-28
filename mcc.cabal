@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.35.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a168355244c92a5a39b4a5a9f6accd48993a937062b5c7daca3f02e5c8838a2c
+-- hash: a6e2a35e681bcfb68b9e3c2c9cde797706265b6ec9279a7acae1ddfb98c4e95e
 
 name:           mcc
 version:        0.1.0.0
@@ -43,7 +43,8 @@ library
       Paths_mcc
   hs-source-dirs:
       src
-  default-extensions: OverloadedStrings, LambdaCase
+  default-extensions:
+      OverloadedStrings, LambdaCase
   ghc-options: -Wall -fno-warn-name-shadowing -Wcompat -Wincomplete-uni-patterns
   build-depends:
       array
@@ -52,9 +53,9 @@ library
     , containers
     , directory
     , filepath
-    , llvm-hs >=9 && <10
+    , llvm-hs ==9.*
     , llvm-hs-pretty >=0.9 && <1
-    , llvm-hs-pure >=9 && <10
+    , llvm-hs-pure ==9.*
     , megaparsec
     , mtl
     , parser-combinators
@@ -71,7 +72,8 @@ executable mcc
       Paths_mcc
   hs-source-dirs:
       app
-  default-extensions: OverloadedStrings, LambdaCase
+  default-extensions:
+      OverloadedStrings, LambdaCase
   ghc-options: -Wall -fno-warn-name-shadowing -Wcompat -Wincomplete-uni-patterns
   build-depends:
       array
@@ -80,9 +82,9 @@ executable mcc
     , containers
     , directory
     , filepath
-    , llvm-hs >=9 && <10
+    , llvm-hs ==9.*
     , llvm-hs-pretty >=0.9 && <1
-    , llvm-hs-pure >=9 && <10
+    , llvm-hs-pure ==9.*
     , mcc
     , megaparsec
     , mtl
@@ -103,7 +105,8 @@ test-suite testall
       Paths_mcc
   hs-source-dirs:
       tests
-  default-extensions: OverloadedStrings, LambdaCase
+  default-extensions:
+      OverloadedStrings, LambdaCase
   ghc-options: -Wall -fno-warn-name-shadowing -Wcompat -Wincomplete-uni-patterns
   build-depends:
       array
@@ -112,9 +115,9 @@ test-suite testall
     , containers
     , directory
     , filepath
-    , llvm-hs >=9 && <10
+    , llvm-hs ==9.*
     , llvm-hs-pretty >=0.9 && <1
-    , llvm-hs-pure >=9 && <10
+    , llvm-hs-pure ==9.*
     , mcc
     , megaparsec
     , mtl
@@ -136,7 +139,8 @@ benchmark bench
       Paths_mcc
   hs-source-dirs:
       bench
-  default-extensions: OverloadedStrings, LambdaCase
+  default-extensions:
+      OverloadedStrings, LambdaCase
   ghc-options: -Wall -fno-warn-name-shadowing -Wcompat -Wincomplete-uni-patterns
   build-depends:
       array
@@ -146,9 +150,9 @@ benchmark bench
     , criterion
     , directory
     , filepath
-    , llvm-hs >=9 && <10
+    , llvm-hs ==9.*
     , llvm-hs-pretty >=0.9 && <1
-    , llvm-hs-pure >=9 && <10
+    , llvm-hs-pure ==9.*
     , mcc
     , megaparsec
     , mtl

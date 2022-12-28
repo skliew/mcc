@@ -1,17 +1,10 @@
-resolver: lts-13.14
+resolver: lts-18.28
 
 packages:
 - '.'
 
 extra-deps:
-# until they merge bugfix into hackage we need to use the version on github
-# - llvm-hs-pure-7.0.0
-- github: llvm-hs/llvm-hs
-  commit: 1b6bf6f3a731c924f3538ed8f3faebaf06ff152d
-  subdirs:
-    - llvm-hs-pure
-- llvm-hs-pretty-0.6.1.0
+- llvm-hs-pretty-0.9.0.0@sha256:b7a5de5f3dd97893d19d2b47af1e4dd8d075a5cf57062180a912d1f3ef1def60,1671
 
-nix:
-    enable: true
-    packages: [llvm_6, clang_6]
+ghc-options:
+  llvm-hs: -optcxx=-std=c++11 -optcxx=-fno-rtti
